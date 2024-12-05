@@ -34,11 +34,11 @@
       color: #f1f5f9;
       font-size: 12px;
       margin-top: 8px;
-      height: 0px;
-      opacity: 0;
-      transition: all 0.6s;
+      height: 0px; 
+      opacity: 0; 
+      transition: all 0.6s ease;
 
-      .btn-default{
+      .btn-default {
         background-color: #6046ff;
         padding: 6px 8px;
         border-radius: 4px;
@@ -47,7 +47,25 @@
         border: none;
         cursor: pointer;
         width: 100%;
+      }
 
+      .trailer-button {
+        background-color: #007bff;
+        color: white;
+        padding: 6px 8px; 
+        border: none;
+        border-radius: 4px;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 14px;
+        width: 100%; 
+        opacity: 0; 
+        height: 10px; 
+        transition: opacity 0.6s ease, height 0.6s ease; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
@@ -61,15 +79,24 @@
 
     .hidden-content {
       opacity: 1;
-      height: 100px;
+      height: auto;
     }
 
-    .movie-info:has(.description) .hidden-content{
-      height: 100px;
+    .movie-info:has(.description) .hidden-content {
+      height: 130px; 
     }
 
-    .movie-info:not(:has(.description)) .hidden-content{
-      height: 50px;
+    .movie-info:not(:has(.description)) .hidden-content {
+      height: 100px; 
+    }
+
+    .hidden-content .trailer-button {
+      opacity: 1;
+      height: 30px; 
     }
   }
+}
+
+.trailer-button:hover {
+  background-color: #0056b3;
 }
